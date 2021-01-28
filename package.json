@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.ts",
+    "start": "node dist/server.js",
     "start-dev": "nodemon server.ts",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
