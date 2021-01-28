@@ -3,6 +3,7 @@ import express  from 'express';
 import bp       from 'body-parser'
 import CORS     from 'cors';
 
+import ping from './routes/ping'
 import room from './routes/room'
 import card from './routes/card'
 
@@ -18,6 +19,7 @@ class App implements App {
         app.use( bp.json( ) );
         app.use( bp.urlencoded( { extended: false } ) );
 
+        app.use( ping );
         app.use( '/room', room );
         app.use( '/card', card );
 
